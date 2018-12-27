@@ -1,3 +1,7 @@
+/*
+A common practice when working with Redux is to assign action types as read-only constants, then reference these constants wherever they are used. You can refactor the code you're working with to write the action types as const declarations.
+*/
+
 // change code below this line
 const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
