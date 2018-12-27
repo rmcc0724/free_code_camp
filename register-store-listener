@@ -21,7 +21,7 @@ const store = Redux.createStore(reducer);
 // Set global count variable:
 let count = 0;
 
-// Declare a function counter that increases by every time its called
+// Declare a function counter that increases by 1 every time its called
 const counter = () => count+=1;
 
 //Call the store.subscribe function passing counter as an arg
