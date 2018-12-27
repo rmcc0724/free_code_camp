@@ -1,7 +1,3 @@
-/*
-Write a callback function that increments the global variable count every time the store receives an action, and pass this function in to the store.subscribe() method. You'll see that store.dispatch() is called three times in a row, each time directly passing in an action object. Watch the console output between the action dispatches to see the updates take place.
-*/
-
 //Create a const named ADD
 const ADD = 'ADD';
 
@@ -21,10 +17,10 @@ const store = Redux.createStore(reducer);
 // Set global count variable:
 let count = 0;
 
-// Declare a function counter that increases by 1 every time its called
+// Declare a call back function that increases the counter by 1 every time its called
 const counter = () => count+=1;
 
-//Call the store.subscribe function passing counter as an arg
+//Call the store.subscribe function while passing counter as a call back function arg
 store.subscribe(counter);
 
 store.dispatch({type: ADD});
