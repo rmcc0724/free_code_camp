@@ -1,0 +1,29 @@
+//Redux: Send Action Data to the Store
+
+
+//Declare the ADD_NOTE action
+const ADD_NOTE = 'ADD_NOTE';
+
+//Create a notesReducer and state the initial state and check the action type
+const notesReducer = (state = 'Initial State', action) => {
+  switch(action.type) {
+//If the action type is ADD_NOTE then set the state to the action.text prop
+case ADD_NOTE:
+return action.text;
+    default:
+      return state;
+  }
+};
+
+const addNoteText = (note) => {
+return {
+  type: ADD_NOTE,
+  text: note
+}
+};
+
+const store = Redux.createStore(notesReducer);
+
+console.log(store.getState());
+store.dispatch(addNoteText('Hello!'));
+console.log(store.getState());
